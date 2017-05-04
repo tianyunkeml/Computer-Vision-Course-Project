@@ -1,0 +1,13 @@
+ADJUST_HIGH = 
+ADJUST_LOW = 
+for i = 1:im_h
+    for j = 1:im_w
+        if outputIm(i,j) > ADJUST_HIGH
+            outputIm(i,j) = ADJUST_HIGH;
+        end
+        if outputIm(i,j) < ADJUST_LOW
+            outputIm(i,j) = ADJUST_LOW;
+        end
+    end
+end
+outputIm = (outputIm-ADJUST_LOW

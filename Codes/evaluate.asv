@@ -1,0 +1,6 @@
+refIm = imread('ref.jpg');
+refIm = rgb2gray(refIm);
+[new_h new_w] = size(final);
+prec = sum(sum(outIm.*refIm))/sums(sum(outIm));
+recall = sum(sum(outIm.*refIm))/sums(sum(refIm));
+F = (1+0.3*prec*recall)/(0.3*prec+recall);
